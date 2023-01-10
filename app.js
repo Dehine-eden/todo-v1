@@ -13,14 +13,12 @@ let RecreationItems = [];
 
 app.set('view engine', 'ejs');
 
-console.log(date.getDate());
-
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 app.get("/", function(req, res){
     
-    let day = date.getDay();
+    let day = date.getDate();
 
     res.render("list", {listTitle: day, newListItems: items});
 
