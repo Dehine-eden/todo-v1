@@ -2,9 +2,9 @@
 
 exports.getDate = function(){
 
-let today = new Date();
+const today = new Date();
 
-let options = {
+const options = {
     weekday: "long",
     month: "long",
     year:"numeric",
@@ -12,7 +12,7 @@ let options = {
     
 };
 
-let day = today.toLocaleDateString("en-US", options);
+const day = today.toLocaleDateString("en-US", options);
 
 return  today.toLocaleDateString("en-US", options);
 
@@ -20,9 +20,9 @@ return  today.toLocaleDateString("en-US", options);
 
 exports.getDay = function(){
 
-let today = new Date();
+const today = new Date();
 
-let options = {
+const options = {
     weekday: "long",
     
 };
