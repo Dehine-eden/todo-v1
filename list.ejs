@@ -1,0 +1,25 @@
+<%- include("header") -%>
+    <div class="box" id="heading">
+
+        <h1 style ="color: gray"><%= listTitle %></h1>
+            
+    </div>
+            <!-- <input type="text" id="myText" name="todolist" value="" placeholder="ToDoList" required>
+            <button type="button" onclick="myFunction()">Add</button> -->
+            <!-- <p id="demo"></p> -->
+
+        <div class="box">
+            <!-- new for loop for adding new lists -->
+           <% for(var i=0; i<newListItems.length; i++){ %>
+            <div class="item">   
+            <input type="checkbox"> 
+            <p><%= newListItems[i] %></p>
+            </div>
+            <% } %>
+            <form class="item" action="/" method="post">
+            <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+            <button type="submit" name="button" value=<%=  listTitle %>>+</button>
+        </form>
+    </div>
+
+    <%- include("footer") -%>
